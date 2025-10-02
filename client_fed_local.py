@@ -21,8 +21,6 @@ dev = "mps" if torch.backends.mps.is_available() else "cpu"
 dev = torch.device(dev)
 dev_four = dev #torch.device("cpu" if torch.cuda.is_available() else "cpu")
 
-#[dev_one, dev_two, dev_three, dev_one, dev_two, dev_three,dev_one, dev_two, dev_three, dev_one, dev_two, dev_three,dev_one, dev_two, dev_three]
-
 class Client:
     def __init__(self, model_type, dataset, device):
         self.device = device
